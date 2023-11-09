@@ -1,4 +1,5 @@
-import 'package:ecomapp/pages/home_page.dart';
+import 'package:ecomapp/pages/first_page.dart';
+import 'package:ecomapp/pages/shop_page.dart';
 import 'package:ecomapp/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: firstPage(),
       theme: lightMode,
+      routes: {
+        "/first_page": (context) => const firstPage(),
+        "/shop_page": (context) => const ShopPage(),
+      },
     );
   }
 }
