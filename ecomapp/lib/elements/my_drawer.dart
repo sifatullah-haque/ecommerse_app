@@ -6,28 +6,52 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          //header file or logo
-          Icon(
-            Icons.shopping_bag,
-            size: 45.0,
-            color: Theme.of(context).colorScheme.inversePrimary,
-          ),
+    return SafeArea(
+      child: Drawer(
+        backgroundColor: Theme.of(context).colorScheme.background,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            //header file or logo
+            Column(
+              children: [
+                SizedBox(
+                  height: 50.0,
+                ),
+                Icon(
+                  Icons.shopping_bag,
+                  size: 70.0,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+                SizedBox(
+                  height: 25.0,
+                ),
+                //list tile
+                MyListTile(
+                  icon: Icons.home_rounded,
+                  text: "Home",
+                  onTap: () {},
+                ),
+                MyListTile(
+                  icon: Icons.shopping_cart,
+                  text: "Cart",
+                  onTap: () {},
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: MyListTile(
+                icon: Icons.logout,
+                text: "Exit",
+                onTap: () {},
+              ),
+            )
 
-          //list tile
-          MyListTile(
-            icon: Icons.home_rounded,
-            text: "Home",
-            onTap: () {},
-          )
-
-          // exit button
-        ],
+            // exit button
+          ],
+        ),
       ),
     );
   }

@@ -42,7 +42,7 @@ class firstPage extends StatelessWidget {
             //button
             MyButton(
                 onTap: () => Navigator.pushNamed(context, "/shop_page"),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_right_alt_rounded,
                   size: 25.0,
                 ))
