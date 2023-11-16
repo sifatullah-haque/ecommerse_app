@@ -1,3 +1,4 @@
+import 'package:ecomapp/pages/cart_page.dart';
 import 'package:ecomapp/pages/first_page.dart';
 import 'package:ecomapp/pages/shop_page.dart';
 import 'package:ecomapp/theme/light_mode.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/first_page": (context) => const firstPage(),
         "/shop_page": (context) => const ShopPage(),
+        "/cart_page": (context) => const CartPage()
       },
     );
   }
